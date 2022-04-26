@@ -1,5 +1,7 @@
 <script>
 	import Hoverable from './Hoverable.svelte';
+	import Button from './Button.svelte';
+	import ButtonGroup from './ButtonGroup.svelte';
 	import data from './data';
 
 
@@ -9,7 +11,7 @@
 	let c2i = -1;
 
 	let selectedTag = "data";
-	let tagSelection = [];
+	let tagSelection = JSON.parse(JSON.stringify(data.tags));
 
 </script>
 
@@ -79,16 +81,19 @@
 	<div class="column2">
 		<span class="tags">
 			<small><b>Tag Selector: </b></small>
+			<ButtonGroup multiple bind:value={tagSelection}>
 			{#each data.tags as tag, index}
-				<!-- <Hoverable  let:hovering={active}> -->
-					<button let:active class:active on:click={() => {tagSelection.push(tag); let active=true;}} ><small>{tag}</small></button>				
-				<!-- </Hoverable> -->
+				<Button value={tag}>
+					{tag}
+				</Button>
+							<!-- <button let:active class:active on:click={() => {tagSelection.push(tag); let active=true;}} ><small>{tag}</small></button>				 -->
 			{/each}
+			</ButtonGroup>
 		</span>
-		<small>Diagnostic: {tagSelection}</small>
+		<small>Current: {tagSelection}</small>
 		<hr style="color: black;">
 		{#each data.posters as poster, index}
-			{#if poster.tags.includes(selectedTag) }
+			{#if poster.tags.some(tag => tagSelection.includes(tag)) }
 				<Hoverable let:hovering={active}>
 					<div class="card" class:active="{active || c2i == index}" on:click={() => {current2 = poster.title; c2i = index;}}>
 						<p>
