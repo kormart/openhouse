@@ -1,6 +1,6 @@
 # openhouse
 
-A static site
+A static event site.
 
 
 This is based on a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
