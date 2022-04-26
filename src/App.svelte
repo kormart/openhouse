@@ -1,6 +1,5 @@
 <script>
 	import Hoverable from './Hoverable.svelte';
-	import Hoverable2 from './Hoverable2.svelte';
 	import data from './data';
 
 
