@@ -3,7 +3,9 @@
 	import Button from './Button.svelte';
 	import ButtonGroup from './ButtonGroup.svelte';
 	import data from './data';
+	import posters from './posters';
 
+	data.posters = posters.posters;
 
 	let current1 = 'keynotes';
 	let current2 = 'foo';
@@ -98,7 +100,7 @@
 					<div class="card" class:active="{active || c2i == index}" on:click={() => {current2 = poster.title; c2i = index;}}>
 						<p>
 							<b>{poster.title} &rarr</b> <br>
-							<small>{poster.presenter}</small> <br>
+							<small>{poster.contact}</small> <br>
 							<small>Tags: {poster.tags}</small> <br>
 							<small><a href="{poster.link}">Teams link</a> </small>
 						</p>
@@ -113,8 +115,8 @@
 	<div class="column3">
 		<div class="card" >
 			<p><b>{data[current1][c2i].title}</b> <br>
-				{#if data[current1][c2i].presenter} 
-					<small>{data[current1][c2i].presenter}</small> <br>	
+				{#if data[current1][c2i].contact} 
+					<small>{data[current1][c2i].contact}</small> <br>	
 				{/if}
 				{#if data[current1][c2i].tags} 
 					<small>Tags: {data[current1][c2i].tags}</small> <br>
@@ -208,6 +210,7 @@
 		padding: 34px 36px;
 		background-color: #333;
 		overflow: hidden;
+		background-image: "background.jpeg";
 	}
 
 	/* Add a black background color to the top navigation */

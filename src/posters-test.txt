@@ -9,10 +9,10 @@ Contact Persons: Daniel Perez (daniel.perez@ri.se), Akhila Rao (akhila.rao@ri.se
 Title: Jamming Detection with JamSense
 Abstract: 
 Low-power wireless networks transmit at low output power and are hence susceptible to cross-technology interference and jamming attacks. These may cause packet loss which may waste scarce energy resources by requiring the retransmission of packets. We present JamSense, a tool that is able to identify jamming attacks with high accuracy while not classifying Bluetooth or WiFi interference as jamming attacks.
-Links: 
-https://www.youtube.com/watch?v=BWODgRWLg8U&t=2s&ab_channel=STACK
+Links: https://www.youtube.com/watch?v=BWODgRWLg8U&t=2s&ab_channel=STACK
 Contact person: Thiemo Voigt <thiemo.voigt@ri.se>
+
 Title: Data trace generation with Multi-Trace
 Abstract: Wireless, low-power, multi-hop networks are exposed to numerous attacks also due to their resource constraints. While there has been a lot of work on intrusion detection systems for such networks, most of these studies have considered only a few topologies, scenarios, and attacks. One of the reasons for this shortcoming is the lack of sufficient data traces required to train many machine learning algorithms. In contrast to other wireless networks, multi-hop networks do not contain one entity that can capture all the traffic, making it more challenging to acquire such traces. We present Multi-Trace, an extension of the Cooja simulator with multi-level tracing facilities that enable data logging at different levels while maintaining a global time.
-
+Links: 
 Contact person: Niclas Finne <niclas.finne@ri.se>

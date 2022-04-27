@@ -11,8 +11,9 @@ export default {
         "edge", 
         "datascience", 
         "4G/5G/6G",
-        "IoT",
+        "iot",
         "cybersecurity",
+        "software"
     ],
     keynotes: [
         {title: "Welcome and Introduction", text: "RISE Computer Science", link: "common_teams_link"},
