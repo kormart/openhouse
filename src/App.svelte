@@ -102,7 +102,7 @@
 							<b>{poster.title} &rarr</b> <br>
 							<small>{poster.contact}</small> <br>
 							<small>Tags: {poster.tags}</small> <br>
-							<small><a href="{poster.link}">Teams link</a> </small>
+							<small><a href="{poster.teams}">Teams link</a> </small>
 						</p>
 					</div>
 				</Hoverable>
@@ -121,7 +121,7 @@
 				{#if data[current1][c2i].tags} 
 					<small>Tags: {data[current1][c2i].tags}</small> <br>
 				{/if}
-				<small><a href="{data[current1][c2i].link}">Teams link</a> </small>
+				<small><a href="{data[current1][c2i].teams}">Teams link</a> </small>
 			</p>
 			<small>{data[current1][c2i].text}</small>	
 		</div>

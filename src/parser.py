@@ -27,8 +27,12 @@ for i,abstract in enumerate(abstracts):
     split_teams = re.split('teams:', split_tags[1], flags=re.IGNORECASE)
     tags = split_teams[0].split(',')
     tags = list(map( lambda tag: tag.strip(), tags))
+    teams = split_teams[1].strip()
+    if teams == '':
+        teams = 'common_team_link'
+
     # print(i,title,end=' ')
-    result.append({"title": title, "text": abstract_text, "links": links, "contact": contact, "tags": tags})
+    result.append({"title": title, "text": abstract_text, "links": links, "contact": contact, "tags": tags, "teams": teams})
 
 
 print('export default {posters: ', result, '}')
