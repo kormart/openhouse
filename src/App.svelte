@@ -182,8 +182,9 @@
 	}
 	.main-page {
 		overflow-y: scroll;
-		background-image: url("../Squares-Green.png");
+		/* background-image: url("../Squares-Green.png"); */
 		height: 100%;
+		width:100%;
 	}
 	.card {
 		padding: 1em;
@@ -227,6 +228,7 @@
 		padding: 34px 36px;
 		background-color: #333;
 		overflow: hidden;
+		width:100%;
 		/* background-image: url("../background.jpeg"); */
 	}
 
@@ -234,6 +236,7 @@
 	.topnav {
 		background-color: #333;
 		overflow: hidden;
+		width:100%;
 	}
 
 	/* Style the links inside the navigation bar */
@@ -248,14 +251,14 @@
 
 	/* Change the color of links on hover */
 	.topnav a:hover {
-	background-color: #ddd;
-	color: black;
+		background-color: #ddd;
+		color: black;
 	}
 
 	/* Add a color to the active/current link */
 	.topnav a.active {
-	background-color: #04AA6D;
-	color: white;
+		background-color: #04AA6D;
+		color: white;
 	}
 
 	footer {
@@ -264,7 +267,7 @@
 		overflow: hidden;
 		text-align: center;
 		font-size: 14px;
-		position:absolute;
+		/* position:absolute; */
 		bottom:0;
 		left: 0;
 		width:100%;
