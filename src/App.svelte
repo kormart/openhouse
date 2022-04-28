@@ -16,12 +16,13 @@
 	let tagSelection = JSON.parse(JSON.stringify(data.tags));
 
 </script>
+<div class="main-page">
 
 <div class="topnav">
-	<a class="active" href="#home">Home</a>
-	<a href="#news">News</a>
-	<a href="#contact">Contact</a>
-	<a href="#about">About</a>
+	<a class="active" href="#home"> </a>
+	<a href="#news"> </a>
+	<a href="#contact"> </a>
+	<a href="#about"> </a>
 	<span>{current1}, {c1i}, {current2}, {c2i}</span>
 </div>
 
@@ -129,6 +130,17 @@
 	{/if}
 
 </div>
+<footer class="text-center bg-dark text-muted">
+	<!-- <div class="mt-2 mb-2">
+		{#each footer_links as link}
+		<Button text rounded>{link}</Button>
+		{/each}
+	</div> -->
+	© 2022 -
+	<b>RISE, Research Institutes of Sweden AB</b>
+</footer>	
+
+</div>
 
 <style>
 	.column1 {
@@ -136,14 +148,14 @@
 		flex-direction: column;
 
 		/* gap: 30px; */
-		background-color: #fff;
+		/* background-color: #fff; */
 		height: 100%;
 	}
 	.column2 {
 		display: flex;
 		flex-direction: column;
 		/* gap: 30px; */
-		background-color: #fff;
+		/* background-color: #fff; */
 		overflow-y: scroll;
 		height: 100%;
 	}
@@ -151,7 +163,7 @@
 		display: flex;
 		flex-direction: column;
 		/* gap: 30px; */
-		background-color: #fff;
+		/* background-color: #fff; */
 		overflow-y: scroll;
 		height: 100%;
 	}
@@ -165,7 +177,12 @@
 		/* grid-auto-rows: 11% ; */
 		/* grid-template-rows: unset; */
 		/* overflow: scroll; */
-		background-color: #fff;
+		/* background-color: #fff; */
+		height: 100%;
+	}
+	.main-page {
+		overflow-y: scroll;
+		background-image: url("../Squares-Green.png");
 		height: 100%;
 	}
 	.card {
@@ -193,7 +210,7 @@
 		margin: 1em 0 1em 0;
 	    border-radius: 10px;
 		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-			background-color: #eee;
+		background-color: #eee;
 		float: left;
 	}
 	.tags button:hover {
@@ -210,7 +227,7 @@
 		padding: 34px 36px;
 		background-color: #333;
 		overflow: hidden;
-		background-image: "background.jpeg";
+		/* background-image: url("../background.jpeg"); */
 	}
 
 	/* Add a black background color to the top navigation */
@@ -239,5 +256,19 @@
 	.topnav a.active {
 	background-color: #04AA6D;
 	color: white;
+	}
+
+	footer {
+		background-color: #333;
+		color: white;
+		overflow: hidden;
+		text-align: center;
+		font-size: 14px;
+		position:absolute;
+		bottom:0;
+		left: 0;
+		width:100%;
+		height:80px;
+		line-height: 80px;
 	}
 </style>
