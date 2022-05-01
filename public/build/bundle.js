@@ -1190,7 +1190,7 @@ var app = (function () {
     			add_location(small1, file, 44, 7, 1170);
     			add_location(br2, file, 44, 63, 1226);
     			add_location(p, file, 41, 6, 1026);
-    			attr_dev(div, "class", "card svelte-46xzx7");
+    			attr_dev(div, "class", "card svelte-7wx43s");
     			toggle_class(div, "active", /*active*/ ctx[16] || /*c1i*/ ctx[3] == /*index*/ ctx[15]);
     			add_location(div, file, 40, 5, 875);
     		},
@@ -1336,7 +1336,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "column2 svelte-46xzx7");
+    			attr_dev(div, "class", "column2 svelte-7wx43s");
     			add_location(div, file, 52, 1, 1322);
     		},
     		m: function mount(target, anchor) {
@@ -1468,7 +1468,7 @@ var app = (function () {
     			add_location(a, file, 59, 14, 1653);
     			add_location(small1, file, 59, 7, 1646);
     			add_location(p, file, 56, 6, 1552);
-    			attr_dev(div, "class", "card svelte-46xzx7");
+    			attr_dev(div, "class", "card svelte-7wx43s");
     			toggle_class(div, "active", /*active*/ ctx[16] || /*c2i*/ ctx[4] == /*index*/ ctx[15]);
     			add_location(div, file, 55, 5, 1429);
     		},
@@ -1613,7 +1613,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "column2 svelte-46xzx7");
+    			attr_dev(div, "class", "column2 svelte-7wx43s");
     			add_location(div, file, 68, 1, 1805);
     		},
     		m: function mount(target, anchor) {
@@ -1745,7 +1745,7 @@ var app = (function () {
     			add_location(a, file, 74, 14, 2126);
     			add_location(small1, file, 74, 7, 2119);
     			add_location(p, file, 72, 6, 2034);
-    			attr_dev(div, "class", "card svelte-46xzx7");
+    			attr_dev(div, "class", "card svelte-7wx43s");
     			toggle_class(div, "active", /*active*/ ctx[16] || /*c2i*/ ctx[4] == /*index*/ ctx[15]);
     			add_location(div, file, 71, 5, 1914);
     		},
@@ -1935,12 +1935,12 @@ var app = (function () {
 
     			add_location(b, file, 85, 10, 2324);
     			add_location(small0, file, 85, 3, 2317);
-    			attr_dev(span, "class", "tags svelte-46xzx7");
+    			attr_dev(span, "class", "tags svelte-7wx43s");
     			add_location(span, file, 84, 2, 2294);
     			add_location(small1, file, 95, 2, 2675);
     			set_style(hr, "color", "black");
     			add_location(hr, file, 96, 2, 2716);
-    			attr_dev(div, "class", "column2 svelte-46xzx7");
+    			attr_dev(div, "class", "column2 svelte-7wx43s");
     			add_location(div, file, 83, 1, 2270);
     		},
     		m: function mount(target, anchor) {
@@ -2366,7 +2366,7 @@ var app = (function () {
     			add_location(a, file, 105, 14, 3159);
     			add_location(small2, file, 105, 7, 3152);
     			add_location(p, file, 101, 6, 3010);
-    			attr_dev(div, "class", "card svelte-46xzx7");
+    			attr_dev(div, "class", "card svelte-7wx43s");
     			toggle_class(div, "active", /*active*/ ctx[16] || /*c2i*/ ctx[4] == /*index*/ ctx[15]);
     			add_location(div, file, 100, 5, 2888);
     		},
@@ -2553,9 +2553,9 @@ var app = (function () {
     			add_location(small0, file, 124, 4, 3613);
     			add_location(p, file, 117, 3, 3357);
     			add_location(small1, file, 126, 3, 3693);
-    			attr_dev(div0, "class", "card svelte-46xzx7");
+    			attr_dev(div0, "class", "card svelte-7wx43s");
     			add_location(div0, file, 116, 2, 3334);
-    			attr_dev(div1, "class", "column3 svelte-46xzx7");
+    			attr_dev(div1, "class", "column3 svelte-7wx43s");
     			add_location(div1, file, 115, 1, 3310);
     		},
     		m: function mount(target, anchor) {
@@ -2823,33 +2823,33 @@ var app = (function () {
     			t20 = text("© 2022 -\n\t");
     			b = element("b");
     			b.textContent = "RISE, Research Institutes of Sweden AB";
-    			attr_dev(a0, "class", "active svelte-46xzx7");
+    			attr_dev(a0, "class", "active svelte-7wx43s");
     			attr_dev(a0, "href", "#home");
     			add_location(a0, file, 21, 1, 464);
     			attr_dev(a1, "href", "#news");
-    			attr_dev(a1, "class", "svelte-46xzx7");
+    			attr_dev(a1, "class", "svelte-7wx43s");
     			add_location(a1, file, 22, 1, 502);
     			attr_dev(a2, "href", "#contact");
-    			attr_dev(a2, "class", "svelte-46xzx7");
+    			attr_dev(a2, "class", "svelte-7wx43s");
     			add_location(a2, file, 23, 1, 525);
     			attr_dev(a3, "href", "#about");
-    			attr_dev(a3, "class", "svelte-46xzx7");
+    			attr_dev(a3, "class", "svelte-7wx43s");
     			add_location(a3, file, 24, 1, 551);
     			add_location(span, file, 25, 1, 575);
-    			attr_dev(div0, "class", "topnav svelte-46xzx7");
+    			attr_dev(div0, "class", "topnav svelte-7wx43s");
     			add_location(div0, file, 20, 0, 442);
     			add_location(br, file, 30, 29, 688);
     			add_location(h1, file, 29, 1, 654);
-    			attr_dev(div1, "class", "jumbo svelte-46xzx7");
+    			attr_dev(div1, "class", "jumbo svelte-7wx43s");
     			add_location(div1, file, 28, 0, 633);
-    			attr_dev(div2, "class", "column1 svelte-46xzx7");
+    			attr_dev(div2, "class", "column1 svelte-7wx43s");
     			add_location(div2, file, 37, 1, 766);
-    			attr_dev(div3, "class", "grid-container svelte-46xzx7");
+    			attr_dev(div3, "class", "grid-container svelte-7wx43s");
     			add_location(div3, file, 35, 0, 735);
     			add_location(b, file, 139, 1, 3949);
-    			attr_dev(footer, "class", "text-center bg-dark text-muted svelte-46xzx7");
+    			attr_dev(footer, "class", "text-center bg-dark text-muted svelte-7wx43s");
     			add_location(footer, file, 132, 0, 3768);
-    			attr_dev(div4, "class", "main-page svelte-46xzx7");
+    			attr_dev(div4, "class", "main-page svelte-7wx43s");
     			add_location(div4, file, 18, 0, 417);
     		},
     		l: function claim(nodes) {

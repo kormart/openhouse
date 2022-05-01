@@ -179,10 +179,13 @@
 		/* overflow: scroll; */
 		/* background-color: #fff; */
 		height: 100%;
+		background-image: url("../RISE_BLACK.png");
+		background-repeat: no-repeat;
+		background-position-x: center;
+		background-size: auto 100%;
 	}
 	.main-page {
 		overflow-y: scroll;
-		/* background-image: url("../Squares-Green.png"); */
 		height: 100%;
 		width:100%;
 	}
