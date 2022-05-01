@@ -10,7 +10,7 @@
 
 <style>
 	.active {
-		background-color: #54c49d;
+		background-color: #f5a9ab;
 		color: white;
 	}
 </style>

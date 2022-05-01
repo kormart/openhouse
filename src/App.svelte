@@ -4,6 +4,7 @@
 	import ButtonGroup from './ButtonGroup.svelte';
 	import data from './data';
 	import posters from './posters';
+import App from '../../button-test/src/App.svelte';
 
 	data.posters = posters.posters;
 
@@ -27,10 +28,8 @@
 </div>
 
 <div class="jumbo">
-	<h1>
-		RISE Computer Science & AI <br>
-		Open House, May 10, 2022
-	</h1>
+	<img src="../rise-csai-logo.png" height="190px" alt="RISE CS&AI"> <br>
+	<b>Open House, May 10, 2022</b>
 </div>
 
 <div class="grid-container">
@@ -179,7 +178,7 @@
 		/* overflow: scroll; */
 		/* background-color: #fff; */
 		height: 100%;
-		background-image: url("../RISE_BLACK.png");
+		background-image: url("../RISE_NEG.png");
 		background-repeat: no-repeat;
 		background-position-x: center;
 		background-size: auto 100%;
@@ -188,6 +187,7 @@
 		overflow-y: scroll;
 		height: 100%;
 		width:100%;
+		background-color: #8dc8c7;
 	}
 	.card {
 		padding: 1em;
@@ -206,7 +206,7 @@
 
 	}
 	.active {
-		background-color: #54c49d;
+		background-color: #009ca6;
 		color: white;
 	}
 	.tags {
@@ -218,11 +218,11 @@
 		float: left;
 	}
 	.tags button:hover {
-  		background-color: #ccc;
+  		background-color: #f5a9ab;
 	}
 
 	button.active {
-		background-color: #54c49d;
+		background-color: #f5a9ab;
 		color: white;
 	}
 	.jumbo {
@@ -232,6 +232,7 @@
 		background-color: #333;
 		overflow: hidden;
 		width:100%;
+		font-size: 37px;
 		/* background-image: url("../background.jpeg"); */
 	}
 
