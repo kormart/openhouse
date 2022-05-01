@@ -28,7 +28,7 @@ import App from '../../button-test/src/App.svelte';
 </div>
 
 <div class="jumbo">
-	<img src="../rise-csai-logo.png" height="190px" alt="RISE CS&AI"> <br>
+	<img src="../rise-csai-logo.png" height="170px" alt="RISE CS&AI"> <br>
 	<b>Open House, May 10, 2022</b>
 </div>
 
@@ -92,8 +92,7 @@ import App from '../../button-test/src/App.svelte';
 			{/each}
 			</ButtonGroup>
 		</span>
-		<small>Current: {tagSelection}</small>
-		<hr style="color: black;">
+		<!-- <small>Current: {tagSelection}</small> -->
 		{#each data.posters as poster, index}
 			{#if poster.tags.some(tag => tagSelection.includes(tag)) }
 				<Hoverable let:hovering={active}>
@@ -216,14 +215,6 @@ import App from '../../button-test/src/App.svelte';
 		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 		background-color: #eee;
 		float: left;
-	}
-	.tags button:hover {
-  		background-color: #f5a9ab;
-	}
-
-	button.active {
-		background-color: #f5a9ab;
-		color: white;
 	}
 	.jumbo {
 		text-align: center;
