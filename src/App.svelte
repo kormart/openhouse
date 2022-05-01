@@ -4,7 +4,6 @@
 	import ButtonGroup from './ButtonGroup.svelte';
 	import data from './data';
 	import posters from './posters';
-import App from '../../button-test/src/App.svelte';
 
 	data.posters = posters.posters;
 
