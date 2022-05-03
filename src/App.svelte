@@ -16,19 +16,24 @@
 	let tagSelection = JSON.parse(JSON.stringify(data.tags));
 
 </script>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+</head>
+
 <div class="main-page">
 
 <div class="topnav">
-	<a class="active" href="#home"> </a>
+	<img style="padding: 30px;	" height="100px" src="../RISE_BLACK.png" alt="RISE">
+	<!-- <a class="active" href="#home"> </a>
 	<a href="#news"> </a>
 	<a href="#contact"> </a>
 	<a href="#about"> </a>
-	<span>{current1}, {c1i}, {current2}, {c2i}</span>
+	<span>{current1}, {c1i}, {current2}, {c2i}</span> -->
 </div>
 
 <div class="jumbo">
-	<img src="../rise-csai-logo.png" height="170px" alt="RISE CS&AI"> <br>
-	<b>Open House, May 10, 2022</b>
+	RISE Computer Science & AI open house<br>
+	<small style="font-size: 25px">10/05/2022 08:30 - 13:00</small>
 </div>
 
 <div class="grid-container">
@@ -176,16 +181,17 @@
 		/* overflow: scroll; */
 		/* background-color: #fff; */
 		height: 100%;
-		background-image: url("../RISE_NEG.png");
+		/* background-image: url("../RISE_NEG.png"); */
 		background-repeat: no-repeat;
 		background-position-x: center;
 		background-size: auto 100%;
 	}
 	.main-page {
-		overflow-y: scroll;
+		font-family: 'Lato', sans-serif;
+		/* overflow-y: scroll; */
 		height: 100%;
-		width:100%;
-		background-color: #8dc8c7;
+		width: 100%;
+		/* background-color: #8dc8c7; */
 	}
 	.card {
 		padding: 1em;
@@ -215,20 +221,26 @@
 		background-color: #eee;
 		float: left;
 	}
-	.jumbo { 
+	.jumbo {
 		text-align: center;
 		color: #f2f2f2;
-		padding: 34px 36px;
-		background-color: #333;
-		overflow: hidden;
-		width:100%;
-		font-size: 37px;
-		/* background-image: url("../background.jpeg"); */
+		/* height: 300px; */
+		margin-left: -12px;
+		margin-right: -12px;
+		padding: 150px;
+		/* background-color: #333; */
+		/* overflow: hidden; */
+		/* width: 100%; */
+		font-size: 45px;
+		background-image: url("../back1.png");
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
 	/* Add a black background color to the top navigation */
 	.topnav {
-		background-color: #333;
+		/* background-color: #333; */
+		height: 170px;
 		overflow: hidden;
 		width:100%;
 	}
