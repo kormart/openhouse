@@ -190,6 +190,9 @@
 		font-family: 'Lato', sans-serif;
 		min-width: 300px;
 		max-width: 3000px;
+		min-height: 600px;
+		max-height: 1000px;
+		/* overflow-x: scroll; */
 		/* height: 100%;
 		width: 100%; */
 	}
@@ -280,8 +283,10 @@
 		text-align: center;
 		font-size: 14px;
 		/* position:absolute; */
-		bottom:0;
-		left: 0;
+		/* bottom:0;
+		left: 0; */
+		margin-left: -12px;
+		margin-right: -12px;
 		width:100%;
 		height:80px;
 		line-height: 80px;
