@@ -215,7 +215,7 @@
 		background-color: #eee;
 		float: left;
 	}
-	.jumbo {
+	.jumbo { 
 		text-align: center;
 		color: #f2f2f2;
 		padding: 34px 36px;
