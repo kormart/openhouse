@@ -174,7 +174,7 @@
 		/* flex-direction: column; */
 		grid-template-columns: repeat(3, 30%);
 		gap: 30px;
-		margin: 30px;
+		margin: 30px; 
 		/* text-align: center; */
 		/* grid-auto-rows: 11% ; */
 		/* grid-template-rows: unset; */
