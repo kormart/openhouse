@@ -9,6 +9,10 @@
 </script>
 
 <style>
+	button {
+		border-radius: 12px;
+		font-size: small;
+	}
 	.active {
 		background-color: #f5a9ab;
 		color: white;

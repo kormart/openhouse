@@ -17,13 +17,13 @@
 
 </script>
 <head>
-	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 </head>
 
 <div class="main-page">
 
 <div class="topnav">
-	<img style="padding: 30px;	" height="100px" src="../RISE_BLACK.png" alt="RISE">
+	<img style="width: 75px; height=96px;" width="75" height="96" src="RISE_BLACK.png" alt="RISE">
 	<!-- <a class="active" href="#home"> </a>
 	<a href="#news"> </a>
 	<a href="#contact"> </a>
@@ -32,8 +32,8 @@
 </div>
 
 <div class="jumbo">
-	RISE Computer Science & AI open house<br>
-	<small style="font-size: 25px">10/05/2022 08:30 - 13:00</small>
+	<strong style="font-size: 40px; line-height: 50px;">RISE Computer Science & AI open house<br></strong>
+	<strong style="font-size: 24px;">10/05/2022 08:30 - 13:00</strong>
 </div>
 
 <div class="grid-container">
@@ -188,10 +188,10 @@
 	}
 	.main-page {
 		font-family: 'Lato', sans-serif;
-		/* overflow-y: scroll; */
-		height: 100%;
-		width: 100%;
-		/* background-color: #8dc8c7; */
+		min-width: 300px;
+		max-width: 3000px;
+		/* height: 100%;
+		width: 100%; */
 	}
 	.card {
 		padding: 1em;
@@ -240,9 +240,15 @@
 	/* Add a black background color to the top navigation */
 	.topnav {
 		/* background-color: #333; */
-		height: 170px;
-		overflow: hidden;
-		width:100%;
+		/* height: 170px; */
+		min-width: 300px;
+		max-width: 880px;
+		/* overflow: hidden; */
+		/* width:100%; */
+		background-size: auto;
+		text-align: left;
+		padding: 30px;
+		margin: auto;
 	}
 
 	/* Style the links inside the navigation bar */
