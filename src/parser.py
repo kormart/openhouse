@@ -32,7 +32,7 @@ for i,abstract in enumerate(abstracts):
         teams = 'common_team_link'
 
     # print(i,title,end=' ')
-    result.append({"title": title, "text": abstract_text, "links": links, "contact": contact, "tags": tags, "teams": teams})
+    result.append({"title": title, "text": abstract_text, "links": links, "presenter": contact, "tags": tags, "teams": teams})
 
 
 print('export default {posters: ', result, '}')

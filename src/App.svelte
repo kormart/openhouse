@@ -39,13 +39,14 @@
 <div class="grid-container">
 
 	<div class="column1" >
+		Agenda sections:
 		{#each data.sections as section, index}
 				<Hoverable let:hovering={active} >
 					<div class="card" class:active="{active || c1i == index}" on:click={() => {current1 = section.title; c1i = index; current2 = 'foo'; c2i = -1;}}>
 						<p>
 							<b style='font-size: 20px;text-transform: uppercase;'>{section.title} &rarr</b><br>
 							<small>{section.text}</small> <br>
-							<small><a href="{section.link}">Teams link</a> </small> <br>
+							<small><a target=”_blank” href="{section.link}">Teams link</a> </small> <br>
 						</p>
 					</div>
 				</Hoverable>
@@ -54,13 +55,14 @@
 
 	{#if current1 == 'keynotes' }
 	<div class="column2">
+		Within chosen section, click to get more info:
 		{#each data.keynotes as keynote, index}
 				<Hoverable let:hovering={active}>
 					<div class="card" class:active="{active || c2i == index}" on:click={() => {current2 = keynote.title; c2i = index;}}>
 						<p
 							><b>{keynote.title} &rarr</b> <br>
-							<small>{keynote.text}</small> <br>
-							<small><a href="{keynote.link}">Teams link</a> </small>
+							<small>{keynote.byline}</small> <br>
+							<small><a target=”_blank” href="{keynote.link}">Teams link</a> </small>
 						</p>
 					</div>
 				</Hoverable>
@@ -70,12 +72,14 @@
 
 	{#if current1 == 'presentations' }
 	<div class="column2">
+		Within chosen section, click to get more info:
 		{#each data.presentations as pres, index}
 				<Hoverable let:hovering={active}>
 					<div class="card" class:active="{active || c2i == index}" on:click={() => {current2 = pres.title; c2i = index;}}>
 						<p><b>{pres.title} &rarr</b> <br>
+							<small>{pres.byline}</small> <br>
 							<small>{pres.presenter}</small> <br>
-							<small><a href="{pres.link}">Teams link</a> </small>
+							<small><a target=”_blank” href="{pres.link}">Teams link</a> </small>
 						</p>
 						</div>
 				</Hoverable>
@@ -85,6 +89,7 @@
 
 	{#if current1 == 'posters' }
 	<div class="column2">
+		Within chosen section, click to get more info:
 		<span class="tags">
 			<small><b>Tag Selector: </b></small>
 			<ButtonGroup multiple bind:value={tagSelection}>
@@ -103,9 +108,9 @@
 					<div class="card" class:active="{active || c2i == index}" on:click={() => {current2 = poster.title; c2i = index;}}>
 						<p>
 							<b>{poster.title} &rarr</b> <br>
-							<small>{poster.contact}</small> <br>
+							<small>{poster.presenter}</small> <br>
 							<small>Tags: {poster.tags}</small> <br>
-							<small><a href="{poster.teams}">Teams link</a> </small>
+							<small><a target=”_blank” href="{poster.teams}">Teams link</a> </small>
 						</p>
 					</div>
 				</Hoverable>
@@ -118,13 +123,14 @@
 	<div class="column3">
 		<div class="card" >
 			<p><b>{data[current1][c2i].title}</b> <br>
-				{#if data[current1][c2i].contact} 
-					<small>{data[current1][c2i].contact}</small> <br>	
+				{#if data[current1][c2i].byline} 
+					<small>{data[current1][c2i].byline}</small> <br>	
 				{/if}
+				<small>{data[current1][c2i].presenter}</small> <br>	
 				{#if data[current1][c2i].tags} 
 					<small>Tags: {data[current1][c2i].tags}</small> <br>
 				{/if}
-				<small><a href="{data[current1][c2i].teams}">Teams link</a> </small>
+				<small><a target=”_blank” href="{data[current1][c2i].teams}">Teams link</a> </small>
 			</p>
 			<small>{data[current1][c2i].text}</small>	
 		</div>
@@ -145,6 +151,16 @@
 </div>
 
 <style>
+	.main-page {
+		font-family: 'Lato', sans-serif;
+		min-width: 300px;
+		max-width: 3000px;
+		/* min-height: 600px; */
+		height: 700px;
+		/* overflow-x: scroll; */
+		/* height: 100%;
+		width: 100%; */
+	}
 	.column1 {
 		display: flex;
 		flex-direction: column;
@@ -185,16 +201,6 @@
 		background-repeat: no-repeat;
 		background-position-x: center;
 		background-size: auto 100%;
-	}
-	.main-page {
-		font-family: 'Lato', sans-serif;
-		min-width: 300px;
-		max-width: 3000px;
-		min-height: 600px;
-		max-height: 1000px;
-		/* overflow-x: scroll; */
-		/* height: 100%;
-		width: 100%; */
 	}
 	.card {
 		padding: 1em;
