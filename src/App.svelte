@@ -185,6 +185,10 @@
 		overflow-y: scroll;
 		height: 100%;
 	}
+ 	.grid-container {
+		display: block;
+	}
+	@media (min-width: 700px) {
 	.grid-container {
 		display: grid;
 		/* flex-direction: column; */
@@ -197,11 +201,8 @@
 		/* overflow: scroll; */
 		/* background-color: #fff; */
 		height: 100%;
-		/* background-image: url("../RISE_NEG.png"); */
-		background-repeat: no-repeat;
-		background-position-x: center;
-		background-size: auto 100%;
 	}
+}
 	.card {
 		padding: 1em;
 		margin: 1em 0 1em 0;
