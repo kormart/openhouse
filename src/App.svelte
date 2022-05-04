@@ -55,7 +55,7 @@
 
 	{#if current1 == 'keynotes' }
 	<div class="column2">
-		Within chosen section, click to get more info:
+		For chosen section, click item for details:
 		{#each data.keynotes as keynote, index}
 				<Hoverable let:hovering={active}>
 					<div class="card" class:active="{active || c2i == index}" on:click={() => {current2 = keynote.title; c2i = index;}}>
@@ -72,7 +72,7 @@
 
 	{#if current1 == 'presentations' }
 	<div class="column2">
-		Within chosen section, click to get more info:
+		For chosen section, click item for details:
 		{#each data.presentations as pres, index}
 				<Hoverable let:hovering={active}>
 					<div class="card" class:active="{active || c2i == index}" on:click={() => {current2 = pres.title; c2i = index;}}>
@@ -89,7 +89,7 @@
 
 	{#if current1 == 'posters' }
 	<div class="column2">
-		Within chosen section, click to get more info:
+		For chosen section, click item for details:
 		<span class="tags">
 			<small><b>Tag Selector: </b></small>
 			<ButtonGroup multiple bind:value={tagSelection}>
@@ -119,8 +119,9 @@
 	</div>
 	{/if}
 
-	{#if current2 != 'foo' }
 	<div class="column3">
+		For chosen item, details:
+		{#if current2 != 'foo' }
 		<div class="card" >
 			<p><b>{data[current1][c2i].title}</b> <br>
 				{#if data[current1][c2i].byline} 
@@ -134,8 +135,8 @@
 			</p>
 			<small>{data[current1][c2i].text}</small>	
 		</div>
+		{/if}
 	</div>
-	{/if}
 
 </div>
 <footer class="text-center bg-dark text-muted">
