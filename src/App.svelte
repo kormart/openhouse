@@ -143,7 +143,7 @@
 							<b>{poster.index}. {poster.title} &rarr</b> <br>
 							<small>{poster.presenter}</small> <br>
 							<small>Tags: {poster.tags}</small> <br>
-							<small><a target=”_blank” href="{poster.teams}">Join poster room and engage with researchers</a> </small>
+							<small><a style="background-color:#ffe500" target=”_blank” href="{poster.teams}">Join poster room and engage with researchers</a> </small>
 						</p>
 					</div>
 				</Hoverable>
@@ -165,7 +165,7 @@
 					<small>Tags: {data[current1][c2i].tags}</small> <br>
 				{/if}
 				{#if c1i == 2}
-				<small><a target=”_blank” href="{data[current1][c2i].teams}">Join poster room and engage with researchers</a> </small>
+				<small><a style="background-color:#ffe500" target=”_blank” href="{data[current1][c2i].teams}">Join poster room and engage with researchers</a> </small>
 				{:else}
 				<small><a target=”_blank” href="{data[current1][c2i].teams}">Join the keynote/presentation session</a> </small>
 				{/if}
@@ -244,7 +244,7 @@
 	.card {
 		padding: 1em;
 		margin: 1em 0 1em 0;
-		background-color: #eee;
+		background-color: #ebf5f0;
 		/* justify-content: space-around; */
 		/* border: 1px solid; */
 	    border-radius: 10px;
@@ -309,17 +309,14 @@
 		font-size: 17px;
 	}
 
-	/* Change the color of links on hover */
-	.topnav a:hover {
+	/* a:link {
 		background-color: #ddd;
 		color: black;
 	}
-
-	/* Add a color to the active/current link */
 	.topnav a.active {
 		background-color: #04AA6D;
 		color: white;
-	}
+	} */
 
 	footer {
 		background-color: #333;
