@@ -10,7 +10,7 @@
 	let current1 = 'keynotes';
 	let current2 = 'foo';
 	let c1i = 0;
-	let c2i = -1;
+	let c2i = 0;
 
 	let selectedTag = "data";
 	let tagSelection = JSON.parse(JSON.stringify(data.tags));
@@ -42,7 +42,7 @@
 		Agenda sections:
 		{#each data.sections as section, index}
 				<Hoverable let:hovering={active} >
-					<div class="card" class:active="{active || c1i == index}" on:click={() => {current1 = section.title; c1i = index; current2 = 'foo'; c2i = -1;}}>
+					<div class="card" class:active="{active || c1i == index}" on:click={() => {current1 = section.title; c1i = index; current2 = 'foo'; c2i = 0;}}>
 						<p>
 							<b style='font-size: 20px;text-transform: uppercase;'>{section.title} &rarr</b><br>
 							<small>{section.text}</small> <br>
@@ -121,7 +121,7 @@
 
 	<div class="column3">
 		For chosen item, details:
-		{#if current2 != 'foo' }
+		<!-- {#if current2 != 'foo' } -->
 		<div class="card" >
 			<p><b>{data[current1][c2i].title}</b> <br>
 				{#if data[current1][c2i].byline} 
@@ -135,7 +135,7 @@
 			</p>
 			<small>{data[current1][c2i].text}</small>	
 		</div>
-		{/if}
+		<!-- {/if} -->
 	</div>
 
 </div>
