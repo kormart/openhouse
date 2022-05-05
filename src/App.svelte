@@ -12,9 +12,29 @@
 	let c1i = 0;
 	let c2i = 0;
 
-	let selectedTag = "data";
 	let tagSelection = JSON.parse(JSON.stringify(data.tags));
 
+	function shuffle(array) {
+		let currentIndex = array.length,  randomIndex;
+
+		// While there remain elements to shuffle.
+		while (currentIndex != 0) {
+
+			// Pick a remaining element.
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex--;
+
+			// And swap it with the current element.
+			[array[currentIndex], array[randomIndex]] = [
+			array[randomIndex], array[currentIndex]];
+		}
+
+		return array;
+	}
+	data.posters.map((poster,i) => data.posters[i]["index"]=i);
+	let randIndex = shuffle([...Array(data.posters.length).keys()]);
+	let randPosters = data.posters.map((poster,i) => data.posters[randIndex[i]]);
+	data.posters = randPosters;
 </script>
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -39,6 +59,7 @@
 <div class="grid-container">
 
 	<div class="column1" >
+		<!-- {randIndex.length} {data.posters.length} {randPosters.length} -->
 		Agenda sections:
 		{#each data.sections as section, index}
 				<Hoverable let:hovering={active} >
@@ -46,7 +67,11 @@
 						<p>
 							<b style='font-size: 20px;text-transform: uppercase;'>{section.title} &rarr</b><br>
 							<small>{section.text}</small> <br>
-							<small><a target=”_blank” href="{section.link}">Teams link</a> </small> <br>
+						{#if index == 2}
+						<small>Join poster rooms, separate for each poster </small> <br>
+						{:else}
+						<small><a target=”_blank” href="{section.link}">Join the keynote/presentation session</a> </small> <br>
+						{/if}
 						</p>
 					</div>
 				</Hoverable>
@@ -62,7 +87,7 @@
 						<p
 							><b>{keynote.title} &rarr</b> <br>
 							<small>{keynote.byline}</small> <br>
-							<small><a target=”_blank” href="{keynote.link}">Teams link</a> </small>
+							<small><a target=”_blank” href="{keynote.link}">Join the keynote/presentation session</a> </small>
 						</p>
 					</div>
 				</Hoverable>
@@ -79,7 +104,7 @@
 						<p><b>{pres.title} &rarr</b> <br>
 							<small>{pres.byline}</small> <br>
 							<small>{pres.presenter}</small> <br>
-							<small><a target=”_blank” href="{pres.link}">Teams link</a> </small>
+							<small><a target=”_blank” href="{pres.link}">Join the keynote/presentation session</a> </small>
 						</p>
 						</div>
 				</Hoverable>
@@ -101,16 +126,16 @@
 			{/each}
 			</ButtonGroup>
 		</span>
-		<!-- <small>Current: {tagSelection}</small> -->
+		<small>Current selection: {data.posters.map(poster=>poster.tags.some(tag => tagSelection.includes(tag))).filter(Boolean).length} posters (scroll to see all!)</small>
 		{#each data.posters as poster, index}
 			{#if poster.tags.some(tag => tagSelection.includes(tag)) }
 				<Hoverable let:hovering={active}>
 					<div class="card" class:active="{active || c2i == index}" on:click={() => {current2 = poster.title; c2i = index;}}>
 						<p>
-							<b>{poster.title} &rarr</b> <br>
+							<b>{poster.index}. {poster.title} &rarr</b> <br>
 							<small>{poster.presenter}</small> <br>
 							<small>Tags: {poster.tags}</small> <br>
-							<small><a target=”_blank” href="{poster.teams}">Teams link</a> </small>
+							<small><a target=”_blank” href="{poster.teams}">Join poster room and engage with researchers</a> </small>
 						</p>
 					</div>
 				</Hoverable>
@@ -123,7 +148,7 @@
 		For chosen item, details:
 		<!-- {#if current2 != 'foo' } -->
 		<div class="card" >
-			<p><b>{data[current1][c2i].title}</b> <br>
+			<p><b>{#if c1i==2} {data[current1][c2i].index}.{/if} {data[current1][c2i].title}</b> <br>
 				{#if data[current1][c2i].byline} 
 					<small>{data[current1][c2i].byline}</small> <br>	
 				{/if}
@@ -131,7 +156,11 @@
 				{#if data[current1][c2i].tags} 
 					<small>Tags: {data[current1][c2i].tags}</small> <br>
 				{/if}
-				<small><a target=”_blank” href="{data[current1][c2i].teams}">Teams link</a> </small>
+				{#if c1i == 2}
+				<small><a target=”_blank” href="{data[current1][c2i].teams}">Join poster room and engage with researchers</a> </small>
+				{:else}
+				<small><a target=”_blank” href="{data[current1][c2i].teams}">Join the keynote/presentation session</a> </small>
+				{/if}
 			</p>
 			<small>{data[current1][c2i].text}</small>	
 		</div>
