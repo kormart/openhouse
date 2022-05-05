@@ -12,7 +12,8 @@
 	let c1i = 0;
 	let c2i = 0;
 
-	let tagSelection = JSON.parse(JSON.stringify(data.tags));
+	// let tagSelection = JSON.parse(JSON.stringify(data.tags));
+	let tagSelection = [];
 
 	function shuffle(array) {
 		let currentIndex = array.length,  randomIndex;
@@ -35,6 +36,10 @@
 	let randIndex = shuffle([...Array(data.posters.length).keys()]);
 	let randPosters = data.posters.map((poster,i) => data.posters[randIndex[i]]);
 	data.posters = randPosters;
+
+	let searchTerm = "";
+	$: filteredList = data.posters.filter(poster => poster.text.toLowerCase().indexOf(searchTerm) !== -1);
+	
 </script>
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -125,10 +130,13 @@
 							<!-- <button let:active class:active on:click={() => {tagSelection.push(tag); let active=true;}} ><small>{tag}</small></button>				 -->
 			{/each}
 			</ButtonGroup>
+			<!-- <small><b>Freetext search: </b></small>
+			<input bind:value={searchTerm} /> -->
 		</span>
-		<small>Current selection: {data.posters.map(poster=>poster.tags.some(tag => tagSelection.includes(tag))).filter(Boolean).length} posters (scroll to see all!)</small>
+		<small>Current selection: {data.posters.map(poster=>tagSelection.every(tag => poster.tags.includes(tag))).filter(Boolean).length} posters (scroll to see all!)</small>
 		{#each data.posters as poster, index}
-			{#if poster.tags.some(tag => tagSelection.includes(tag)) }
+			<!-- {#if poster.tags.every(tag => tagSelection.includes(tag)) } -->
+			{#if tagSelection.every(tag => poster.tags.includes(tag)) }
 				<Hoverable let:hovering={active}>
 					<div class="card" class:active="{active || c2i == index}" on:click={() => {current2 = poster.title; c2i = index;}}>
 						<p>
@@ -145,7 +153,7 @@
 	{/if}
 
 	<div class="column3">
-		For chosen item, details:
+		Details for chosen item:
 		<!-- {#if current2 != 'foo' } -->
 		<div class="card" >
 			<p><b>{#if c1i==2} {data[current1][c2i].index}.{/if} {data[current1][c2i].title}</b> <br>

@@ -2,7 +2,7 @@ export default {
     sections: [
         {title: "keynotes", text: "8.30-9.30, 4 x 15 mins, one track session", link: "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzQxMGYxMGYtOGNmNy00MTRmLTg2OGMtYzcyNzNmNWQ1OGQ0%40thread.v2/0?context=%7b%22Tid%22%3a%225a9809cf-0bcb-413a-838a-09ecc40cc9e8%22%2c%22Oid%22%3a%22d8aaa3f7-c388-4111-ab10-c711cf05e49d%22%7d"},
         {title: "presentations", text: "9.30-11.00, 10 x 6 min, one track session", link: "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzQxMGYxMGYtOGNmNy00MTRmLTg2OGMtYzcyNzNmNWQ1OGQ0%40thread.v2/0?context=%7b%22Tid%22%3a%225a9809cf-0bcb-413a-838a-09ecc40cc9e8%22%2c%22Oid%22%3a%22d8aaa3f7-c388-4111-ab10-c711cf05e49d%22%7d"},
-        {title: "posters", text: "11.00-13.00, 50+ posters, parallel track session", link: "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzQxMGYxMGYtOGNmNy00MTRmLTg2OGMtYzcyNzNmNWQ1OGQ0%40thread.v2/0?context=%7b%22Tid%22%3a%225a9809cf-0bcb-413a-838a-09ecc40cc9e8%22%2c%22Oid%22%3a%22d8aaa3f7-c388-4111-ab10-c711cf05e49d%22%7d"}
+        {title: "posters", text: "11.00-13.00, 75+ posters, parallel rooms", link: "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzQxMGYxMGYtOGNmNy00MTRmLTg2OGMtYzcyNzNmNWQ1OGQ0%40thread.v2/0?context=%7b%22Tid%22%3a%225a9809cf-0bcb-413a-838a-09ecc40cc9e8%22%2c%22Oid%22%3a%22d8aaa3f7-c388-4111-ab10-c711cf05e49d%22%7d"}
     ],
     tags: [
         "ai", 
