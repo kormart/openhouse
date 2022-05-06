@@ -75,7 +75,7 @@
 						{#if index == 2}
 						<small>Poster rooms, separate for each poster </small> <br>
 						{:else}
-						<small><a target=”_blank” href="{section.link}">Join the keynote/presentation session</a> </small> <br>
+						<small><a target=”_blank” href="{section.teams}">Join the keynote/presentation session</a> </small> <br>
 						{/if}
 						</p>
 					</div>
@@ -92,7 +92,7 @@
 						<p
 							><b>{keynote.title} &rarr</b> <br>
 							<small>{keynote.byline}</small> <br>
-							<small><a target=”_blank” href="{keynote.link}">Join the keynote/presentation session</a> </small>
+							<small><a target=”_blank” href="{keynote.teams}">Join the keynote/presentation session</a> </small>
 						</p>
 					</div>
 				</Hoverable>
@@ -109,7 +109,7 @@
 						<p><b>{pres.title} &rarr</b> <br>
 							<small>{pres.byline}</small> <br>
 							<small>{pres.presenter}</small> <br>
-							<small><a target=”_blank” href="{pres.link}">Join the keynote/presentation session</a> </small>
+							<small><a target=”_blank” href="{pres.teams}">Join the keynote/presentation session</a> </small>
 						</p>
 						</div>
 				</Hoverable>
@@ -161,6 +161,9 @@
 					<small>{data[current1][c2i].byline}</small> <br>	
 				{/if}
 				<small>{data[current1][c2i].presenter}</small> <br>	
+				{#if c1i == 0} 
+					<small><a target=”_blank” href="{data[current1][c2i].link}">{data[current1][c2i].link}</a></small> <br>
+				{/if}
 				{#if data[current1][c2i].tags} 
 					<small>Tags: {data[current1][c2i].tags}</small> <br>
 				{/if}
