@@ -73,7 +73,7 @@
 							<b style='font-size: 20px;text-transform: uppercase;'>{section.title} &rarr</b><br>
 							<small>{section.text}</small> <br>
 						{#if index == 2}
-						<small>Join poster rooms, separate for each poster </small> <br>
+						<small>Poster rooms, separate for each poster </small> <br>
 						{:else}
 						<small><a target=”_blank” href="{section.link}">Join the keynote/presentation session</a> </small> <br>
 						{/if}
@@ -143,7 +143,7 @@
 							<b>{poster.index}. {poster.title} &rarr</b> <br>
 							<small>{poster.presenter}</small> <br>
 							<small>Tags: {poster.tags}</small> <br>
-							<small><a style="background-color:#ffe500" target=”_blank” href="{poster.teams}">Join poster room and engage with researchers</a> </small>
+							<small><a style="background-color:#ffe500; color:black;" target=”_blank” href="{poster.teams}">Join poster room and engage with researchers</a> </small>
 						</p>
 					</div>
 				</Hoverable>
@@ -165,7 +165,7 @@
 					<small>Tags: {data[current1][c2i].tags}</small> <br>
 				{/if}
 				{#if c1i == 2}
-				<small><a style="background-color:#ffe500" target=”_blank” href="{data[current1][c2i].teams}">Join poster room and engage with researchers</a> </small>
+				<small><a style="background-color:#ffe500; color:black;" target=”_blank” href="{data[current1][c2i].teams}">Join poster room and engage with researchers</a> </small>
 				{:else}
 				<small><a target=”_blank” href="{data[current1][c2i].teams}">Join the keynote/presentation session</a> </small>
 				{/if}
