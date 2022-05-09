@@ -36,9 +36,14 @@
 	let randIndex = shuffle([...Array(data.posters.length).keys()]);
 	let randPosters = data.posters.map((poster,i) => data.posters[randIndex[i]]);
 	data.posters = randPosters;
+	
+	data.posters.forEach(poster => {
+		poster['search'] = poster.title + ' ' + poster.text + ' ' + poster.presenter;
+	});
 
 	let searchTerm = "";
-	$: filteredList = data.posters.filter(poster => poster.text.toLowerCase().indexOf(searchTerm) !== -1);
+	$: taggedList = [...Array(data.posters.length).keys()].filter(i => tagSelection.every(tag => data.posters[i].tags.includes(tag)));
+	$: filteredList = [...Array(data.posters.length).keys()].filter(i => data.posters[i].search.toLowerCase().indexOf(searchTerm) !== -1);
 	
 </script>
 <head>
@@ -130,13 +135,13 @@
 							<!-- <button let:active class:active on:click={() => {tagSelection.push(tag); let active=true;}} ><small>{tag}</small></button>				 -->
 			{/each}
 			</ButtonGroup>
-			<!-- <small><b>Freetext search: </b></small>
-			<input bind:value={searchTerm} /> -->
+			<small><b>Freetext search: </b></small>
+			<input bind:value={searchTerm} />
 		</span>
-		<small>Current selection: {data.posters.map(poster=>tagSelection.every(tag => poster.tags.includes(tag))).filter(Boolean).length} posters (scroll to see all!)</small>
+		<small>Current selection: {(taggedList.filter(i=>filteredList.includes(i))).length} posters (scroll to see all!)</small>
 		{#each data.posters as poster, index}
 			<!-- {#if poster.tags.every(tag => tagSelection.includes(tag)) } -->
-			{#if tagSelection.every(tag => poster.tags.includes(tag)) }
+			{#if (taggedList.indexOf(index)!== -1) && (filteredList.indexOf(index)!== -1) }
 				<Hoverable let:hovering={active}>
 					<div class="card" class:active="{active || c2i == index}" on:click={() => {current2 = poster.title; c2i = index;}}>
 						<p>
