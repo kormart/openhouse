@@ -44,7 +44,8 @@
 	let searchTerm = "";
 	$: taggedList = [...Array(data.posters.length).keys()].filter(i => tagSelection.every(tag => data.posters[i].tags.includes(tag)));
 	$: filteredList = [...Array(data.posters.length).keys()].filter(i => data.posters[i].search.toLowerCase().indexOf(searchTerm) !== -1);
-	
+	$: c2i = ((taggedList.filter(i=>filteredList.includes(i))).length !=0) ? (taggedList.filter(i=>filteredList.includes(i)))[0] : -1; 
+	// $: c2i = (filteredList + taggedList)?-1:-1; 
 </script>
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -159,7 +160,7 @@
 
 	<div class="column3">
 		Details for chosen item:
-		<!-- {#if current2 != 'foo' } -->
+		{#if c2i != -1 }
 		<div class="card" >
 			<p><b>{#if c1i==2} {data[current1][c2i].index}.{/if} {data[current1][c2i].title}</b> <br>
 				{#if data[current1][c2i].byline} 
@@ -175,12 +176,12 @@
 				{#if c1i == 2}
 				<small><a style="background-color:#ffe500; color:black;" target=”_blank” href="{data[current1][c2i].teams}">Join poster room and engage with researchers</a> </small>
 				{:else}
-				<small><a target=”_blank” href="{data[current1][c2i].teams}">Join the keynote/presentation session</a> </small>
+				<small><a style="background-color:#ffe500; color:black;" target=”_blank” href="{data[current1][c2i].teams}">Join the keynote/presentation session</a> </small>
 				{/if}
 			</p>
 			<small>{data[current1][c2i].text}</small>	
 		</div>
-		<!-- {/if} -->
+		{/if}
 	</div>
 
 </div>
