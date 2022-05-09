@@ -43,7 +43,7 @@
 
 	let searchTerm = "";
 	$: taggedList = [...Array(data.posters.length).keys()].filter(i => tagSelection.every(tag => data.posters[i].tags.includes(tag)));
-	$: filteredList = [...Array(data.posters.length).keys()].filter(i => data.posters[i].search.toLowerCase().indexOf(searchTerm) !== -1);
+	$: filteredList = [...Array(data.posters.length).keys()].filter(i => data.posters[i].search.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1);
 	$: c2i = ((taggedList.filter(i=>filteredList.includes(i))).length !=0) ? (taggedList.filter(i=>filteredList.includes(i)))[0] : -1; 
 	// $: c2i = (filteredList + taggedList)?-1:-1; 
 </script>
