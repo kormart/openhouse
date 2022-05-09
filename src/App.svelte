@@ -80,7 +80,7 @@
 						{#if index == 2}
 						<small>Poster rooms, separate for each poster </small> <br>
 						{:else}
-						<small><a target=”_blank” href="{section.teams}">Join the keynote/presentation session</a> </small> <br>
+						<small><a style="background-color:#ffe500; color:black;" target=”_blank” href="{section.teams}">Join the keynote/presentation session</a> </small> <br>
 						{/if}
 						</p>
 					</div>
@@ -97,7 +97,7 @@
 						<p
 							><b>{keynote.title} &rarr</b> <br>
 							<small>{keynote.byline}</small> <br>
-							<small><a target=”_blank” href="{keynote.teams}">Join the keynote/presentation session</a> </small>
+							<small><a style="background-color:#ffe500; color:black;" target=”_blank” href="{keynote.teams}">Join the keynote/presentation session</a> </small>
 						</p>
 					</div>
 				</Hoverable>
@@ -114,7 +114,7 @@
 						<p><b>{pres.title} &rarr</b> <br>
 							<small>{pres.byline}</small> <br>
 							<small>{pres.presenter}</small> <br>
-							<small><a target=”_blank” href="{pres.teams}">Join the keynote/presentation session</a> </small>
+							<small><a style="background-color:#ffe500; color:black;" target=”_blank” href="{pres.teams}">Join the keynote/presentation session</a> </small>
 						</p>
 						</div>
 				</Hoverable>
@@ -136,7 +136,7 @@
 			{/each}
 			</ButtonGroup>
 			<small><b>Freetext search: </b></small>
-			<input bind:value={searchTerm} />
+			<input bind:value={searchTerm} autocapitalize="off"/>
 		</span>
 		<small>Current selection: {(taggedList.filter(i=>filteredList.includes(i))).length} posters (scroll to see all!)</small>
 		{#each data.posters as poster, index}
